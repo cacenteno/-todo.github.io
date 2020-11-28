@@ -33,7 +33,8 @@ class Todo extends React.Component {
     render() {
         if (!this.state.toggle) {
             return (
-                    <div className="d-flex py-3">
+                    <div className="card py-1">
+                        <div className="d-flex">
                         <div className="mr-auto">
                             <h3>{this.state.title}</h3>
                             <p>{this.state.description}</p>
@@ -45,11 +46,13 @@ class Todo extends React.Component {
                             <i className="fa fa-edit"></i>
                         </button>
                     </div>
+                    </div>
             );
         }
         else {
             return (
-                    <div className="d-flex">
+                    <div className="card py-1">
+                        <div className="d-flex">
                         <div className="mr-auto">
                             <input className="form-control" type="text" name="title"  onChange={e=> this.setState({title: e.target.value})} value={this.state.title} placeholder="Title"/>
                             <input className="form-control" type="text" name="description"  onChange={e=> this.setState({description: e.target.value})} value={this.state.description} placeholder="Description"/>
@@ -60,6 +63,7 @@ class Todo extends React.Component {
                         <button className="btn btn-success">
                             <i className="fa fa-check" onClick={() => this.commitEdit()}></i>
                         </button>
+                    </div>
                     </div>
             )
         }

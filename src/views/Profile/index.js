@@ -1,7 +1,6 @@
 import React from "react";
 import AddTodo from "../../components/AddTodo"
 import TodoList from "../../components/TodoList"
-import Timer from "../../components/Timer"
 import axios from "axios";
 class Profile extends React.Component {
     constructor(props) {
@@ -72,9 +71,6 @@ class Profile extends React.Component {
                 <div className="col-sm-7">
                 <AddTodo addTodo={this.postTodo} token={this.props.token}/>
                 <TodoList {...this.props} reorderTodos={this.reorderTodos} editTodo={this.editTodo} removeTodo={this.removeTodo}/>
-                </div>
-                <div className="col-sm-5">
-                    <Timer/>
                 </div>
                 </div>
             </React.Fragment>

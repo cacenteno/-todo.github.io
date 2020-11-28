@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react'
-
+//Add validation for sign up 
 function Login(props) {
     const handleLogin = async (e)=>{
         try{
